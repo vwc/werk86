@@ -2,10 +2,30 @@
 // --------------------------------------
 
  body {
-  padding-top: 20px;
   padding-bottom: 60px;
     //background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpi/P//PwM2wMSAA9BagpGR0QkgwAC+uANOnTZyJwAAAABJRU5ErkJggg==);
 
+}
+
+body > header {
+  border-top: 10px solid @appBlue;
+  #brandname {
+    display: block;
+    .size(163px, 166px);
+    margin: -10px @baseLineHeight @baseLineHeight 0;
+    border: 1px solid @appBlueLight;
+    background:url(../assets/img/logo.jpg) no-repeat 0 0 transparent;
+    text-indent: 9999px;
+    overflow: hidden;
+  }
+  p {
+    color: @appBlue;
+    padding: @baseLineHeight;
+    font-size: 16px;
+    a {
+      color: @appBlue;
+    }
+  }
 }
 
 /* Custom container */
@@ -19,54 +39,55 @@
 
 /* Main marketing message and sign up button */
 .jumbotron {
-    margin: 80px 0;
+    margin: 60px 0;
     text-align: center;
-      h1 {
-      font-size: 100px;
+    h3 {
+      color: @appBlueLight;
+      font-size: 40px;
       line-height: 1;
+      span {
+        color: @appBlue;
+      }
     }
     .lead {
       font-size: 24px;
       line-height: 1.25;
     }
     .btn {
-      font-size: 21px;
+      font-size: 24px;
       padding: 14px 24px;
+      .border-radius(0px);
+      width: 120px;
+      margin-right: @baseLineHeight;
+      font-family: 'OswaldBook';
     }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 60px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+#marketing {
+  .bigpoint {
+    .square(240px);
+    .center-block();
+    border: 10px solid @grayLighter;
+  }
+  h2 {
+    font-family: 'OswaldBook';
+    color: @appBlue;
+    margin-left:@baseLineHeight * 3;
+  }
+  ul {
+    margin-left:@baseLineHeight * 3;
+  }
 }
 
-
-/* Customize the navbar links to be fill the entire space of the .navbar */
-.navbar .navbar-inner {
-  padding: 0;
-}
-.navbar .nav {
-  margin: 0;
-}
-.navbar .nav li {
-  display: table-cell;
-  width: 1%;
-  float: none;
-}
-.navbar .nav li a {
-  font-weight: bold;
+#portfolio {
+  background: @appBlue;
+  color: @white;
   text-align: center;
-  border-left: 1px solid rgba(255,255,255,.75);
-  border-right: 1px solid rgba(0,0,0,.1);
 }
-.navbar .nav li:first-child a {
-  border-left: 0;
-  border-radius: 3px 0 0 3px;
-}
-.navbar .nav li:last-child a {
-  border-right: 0;
-  border-radius: 0 3px 3px 0;
+
+#footer {
+  h4 {
+    font-family: 'OswaldBook';
+    color: @appBlue;
+  }
 }
