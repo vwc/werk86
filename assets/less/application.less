@@ -60,6 +60,7 @@ body > header {
       width: 120px;
       margin-right: @baseLineHeight;
       font-family: 'OswaldBook';
+      border-color: @white;
     }
 }
 
@@ -68,6 +69,12 @@ body > header {
     .square(240px);
     .center-block();
     border: 10px solid @grayLighter;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    .label {
+      background: @appBlue;
+    }
   }
   h2 {
     font-family: 'OswaldBook';
