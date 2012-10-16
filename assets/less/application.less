@@ -11,16 +11,16 @@ body > header {
   border-top: 10px solid @appBlue;
   #brandname {
     display: block;
-    .size(163px, 166px);
+    overflow: hidden;
     margin: -10px @baseLineHeight @baseLineHeight 0;
     border: 1px solid @appBlueLight;
     background:url(../assets/img/logo.jpg) no-repeat 0 0 transparent;
     text-indent: 9999px;
-    overflow: hidden;
+    .size(163px, 166px);
   }
   p {
-    color: @appBlue;
     padding: @baseLineHeight;
+    color: @appBlue;
     font-size: 16px;
     a {
       color: @appBlue;
@@ -41,6 +41,7 @@ body > header {
 .jumbotron {
     margin: 60px 0;
     text-align: center;
+    background: @white;
     h3 {
       color: @appBlueLight;
       font-size: 40px;
@@ -62,24 +63,77 @@ body > header {
       font-family: 'OswaldBook';
       border-color: @white;
     }
+    .infobox {
+      display: none;
+      margin-top: @baseLineHeight * 2;
+      text-align: left;
+      h2, h3 {
+        color:@appBlue;
+        font-family: 'OswaldBook';
+        font-weight: normal;
+      }
+      h3 {
+        font-size: @baseFontSize * 1.75;
+      }
+      p.closebtn {
+        text-align: right;
+      }
+      .close {
+        float: none;
+        font-size: 50px;
+        text-align: center;
+      }
+    }
 }
 
 #marketing {
   .bigpoint {
+    display: table-cell;
+    border: 10px solid @grayLighter;
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: @baseLineHeight * 2;
+    position:relative;
+    .lug {
+      position: absolute;
+      bottom: -25px;
+      left: 110px;
+      //border: 1px solid red;
+      .size(25px, 20px);
+      background: @appBlue;
+      .lug-icon {
+        color: @appBlueLight;
+      }
+      .arrow,
+      .arrow:after {
+        position: relative;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+      }
+      &.bottom .arrow {
+        top: -@popoverArrowWidth;
+        left: 30%;
+        margin-left: -@popoverArrowWidth;
+        border-width: 0 @popoverArrowWidth @popoverArrowWidth;
+        border-bottom-color: @popoverArrowColor;
+        &:after {
+          border-width: 0 @popoverArrowOuterWidth @popoverArrowOuterWidth;
+          border-bottom-color: @popoverArrowOuterColor;
+          top: -1px;
+          left: -@popoverArrowOuterWidth;
+        }
+      }
+    }
     .square(240px);
     .center-block();
-    border: 10px solid @grayLighter;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    .label {
-      background: @appBlue;
-    }
   }
   h2 {
-    font-family: 'OswaldBook';
-    color: @appBlue;
     margin-left:@baseLineHeight * 3;
+    color: @appBlue;
+    font-family: 'OswaldBook';
   }
   ul {
     margin-left:@baseLineHeight * 3;
@@ -96,5 +150,23 @@ body > header {
   h4 {
     font-family: 'OswaldBook';
     color: @appBlue;
+  }
+  #contact-form {
+    label {
+      font-weight: bold;
+      color: @appBlue;
+    }
+    input[type="text"],
+    textarea {
+      border: 2px solid @appBlueLight;
+      .input-xlarge();
+    }
+    input[type="submit"] {
+      .border-radius(0px);
+      //width: 120px;
+      margin-right: @baseLineHeight;
+      font-family: 'OswaldBook';
+      border-color: @white;
+    }
   }
 }

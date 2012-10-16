@@ -5288,17 +5288,17 @@ body > header {
 }
 body > header #brandname {
   display: block;
-  width: 166px;
-  height: 163px;
+  overflow: hidden;
   margin: -10px 20px 20px 0;
   border: 1px solid #a6b5c4;
   background: url(../assets/img/logo.jpg) no-repeat 0 0 transparent;
   text-indent: 9999px;
-  overflow: hidden;
+  width: 166px;
+  height: 163px;
 }
 body > header p {
-  color: #7494aa;
   padding: 20px;
+  color: #7494aa;
   font-size: 16px;
 }
 body > header p a {
@@ -5315,6 +5315,7 @@ body > header p a {
 .jumbotron {
   margin: 60px 0;
   text-align: center;
+  background: #ffffff;
 }
 .jumbotron h3 {
   color: #a6b5c4;
@@ -5339,24 +5340,78 @@ body > header p a {
   font-family: 'OswaldBook';
   border-color: #ffffff;
 }
+.jumbotron .infobox {
+  display: none;
+  margin-top: 40px;
+  text-align: left;
+}
+.jumbotron .infobox h2,
+.jumbotron .infobox h3 {
+  color: #7494aa;
+  font-family: 'OswaldBook';
+  font-weight: normal;
+}
+.jumbotron .infobox h3 {
+  font-size: 24.5px;
+}
+.jumbotron .infobox p.closebtn {
+  text-align: right;
+}
+.jumbotron .infobox .close {
+  float: none;
+  font-size: 50px;
+  text-align: center;
+}
 #marketing .bigpoint {
+  display: table-cell;
+  border: 10px solid #eeeeee;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
   width: 240px;
   height: 240px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 10px solid #eeeeee;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
 }
-#marketing .bigpoint .label {
+#marketing .bigpoint .lug {
+  position: absolute;
+  bottom: -25px;
+  left: 110px;
+  width: 20px;
+  height: 25px;
   background: #7494aa;
 }
+#marketing .bigpoint .lug .lug-icon {
+  color: #a6b5c4;
+}
+#marketing .bigpoint .lug .arrow,
+#marketing .bigpoint .lug .arrow:after {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+#marketing .bigpoint .lug.bottom .arrow {
+  top: -10px;
+  left: 30%;
+  margin-left: -10px;
+  border-width: 0 10px 10px;
+  border-bottom-color: #ffffff;
+}
+#marketing .bigpoint .lug.bottom .arrow:after {
+  border-width: 0 11px 11px;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  top: -1px;
+  left: -11px;
+}
 #marketing h2 {
-  font-family: 'OswaldBook';
-  color: #7494aa;
   margin-left: 60px;
+  color: #7494aa;
+  font-family: 'OswaldBook';
 }
 #marketing ul {
   margin-left: 60px;
@@ -5369,4 +5424,21 @@ body > header p a {
 #footer h4 {
   font-family: 'OswaldBook';
   color: #7494aa;
+}
+#footer #contact-form label {
+  font-weight: bold;
+  color: #7494aa;
+}
+#footer #contact-form input[type="text"],
+#footer #contact-form textarea {
+  border: 2px solid #a6b5c4;
+  width: 270px;
+}
+#footer #contact-form input[type="submit"] {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  margin-right: 20px;
+  font-family: 'OswaldBook';
+  border-color: #ffffff;
 }
