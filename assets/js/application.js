@@ -50,8 +50,7 @@
                 data: form_contents,
                 url: form_action,
                 success: function (result) {
-                    alert(result);
-                    $('#contact-form').prepend('<div class="alert">' +
+                    $('#site-contact').append('<div class="alert">' +
                                              result +
                                              '</div>');
                 }

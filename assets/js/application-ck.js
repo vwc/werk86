@@ -41,8 +41,7 @@
                 data: form_contents,
                 url: form_action,
                 success: function(t) {
-                    alert(t);
-                    e("#contact-form").prepend('<div class="alert">' + t + "</div>");
+                    e("#site-contact").append('<div class="alert">' + t + "</div>");
                 }
             });
             return !1;
