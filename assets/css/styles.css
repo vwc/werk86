@@ -5421,6 +5421,7 @@ body > header p a {
   margin-left: 60px;
   color: #7494aa;
   font-family: 'OswaldBook';
+  font-weight: normal;
 }
 #marketing ul {
   margin-left: 60px;
@@ -5435,6 +5436,7 @@ body > header p a {
 }
 #footer h2 {
   font-family: 'OswaldBook';
+  font-weight: normal;
   color: #7494aa;
 }
 #footer #contact-form label {
