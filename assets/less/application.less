@@ -96,6 +96,21 @@ body > header {
     text-align: center;
     margin-bottom: @baseLineHeight * 2;
     position:relative;
+    .bigpoint-inner {
+      text-indent: 99999px;
+      overflow: hidden;
+      background: url(../img/sprite.png) no-repeat 0 40px transparent;
+      display: block;
+      .size(220px, 240px);
+      .center-block();
+      &.bpi-2 {
+        background-position: -260px 0px;
+      }
+      &.bpi-3 {
+        background-position: -500px 30px;
+        .size(220px, 180px);
+      }
+    }
     .lug {
       position: absolute;
       bottom: -30px;
@@ -152,6 +167,14 @@ body > header {
   background: @appBlue;
   color: @white;
   text-align: center;
+  padding: @baseLineHeight 0px;
+  #logobar {
+    text-indent: 99999px;
+    overflow: hidden;
+    height: @navbarHeight * 2.5;
+    margin: 0px -@baseLineHeight;
+    background: url(../img/sprite.png) no-repeat 15px -240px transparent;
+  }
 }
 
 #footer {
@@ -160,6 +183,9 @@ body > header {
     font-family: 'OswaldBook';
     font-weight: normal;
     color: @appBlue;
+  }
+  a {
+    color: @appBlueLight;
   }
   #contact-form {
     label {

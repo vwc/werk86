@@ -5377,6 +5377,24 @@ body > header p a {
   margin-left: auto;
   margin-right: auto;
 }
+#marketing .bigpoint .bigpoint-inner {
+  text-indent: 99999px;
+  overflow: hidden;
+  background: url(../img/sprite.png) no-repeat 0 40px transparent;
+  width: 240px;
+  height: 220px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#marketing .bigpoint .bigpoint-inner.bpi-2 {
+  background-position: -260px 0px;
+}
+#marketing .bigpoint .bigpoint-inner.bpi-3 {
+  background-position: -500px 30px;
+  width: 180px;
+  height: 220px;
+}
 #marketing .bigpoint .lug {
   position: absolute;
   bottom: -30px;
@@ -5430,6 +5448,14 @@ body > header p a {
   background: #7494aa;
   color: #ffffff;
   text-align: center;
+  padding: 20px 0px;
+}
+#portfolio #logobar {
+  text-indent: 99999px;
+  overflow: hidden;
+  height: 100px;
+  margin: 0px -20px;
+  background: url(../img/sprite.png) no-repeat 15px -240px transparent;
 }
 #footer {
   padding-top: 40px;
@@ -5438,6 +5464,9 @@ body > header p a {
   font-family: 'OswaldBook';
   font-weight: normal;
   color: #7494aa;
+}
+#footer a {
+  color: #a6b5c4;
 }
 #footer #contact-form label {
   font-weight: bold;
