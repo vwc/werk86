@@ -223,25 +223,26 @@
           <div class="span8">
             <aside id="fp-portlets">
               <form id="contact-form"
-                form method="post" action="cgi-bin/comment.py">
+                form method="post" action="/cgi-bin/comment.py">
                 <div class="control-group">
-                  <label class="control-label" for="inputName">Ihr Name</label>
+                  <label class="control-label" for="name">Ihr Name</label>
                   <div class="controls">
-                    <input type="text" id="inputName" placeholder="Name">
+                    <input type="text" id="name" name="name" placeholder="Name">
                   </div>
                 </div>
                 <div class="control-group">
-                  <label class="control-label" for="inputEmail">Ihre E-Mail-Adresse</label>
+                  <label class="control-label" for="yourEmail">Ihre E-Mail-Adresse</label>
                   <div class="controls">
-                    <input type="text" id="inputEmail" placeholder="Email">
+                    <input type="text" id="yourEmail" name="yourEmail" placeholder="Email">
                   </div>
                 </div>
                 <div class="control-group">
-                  <label class="control-label" for="inputMessage">Ihre Nachricht</label>
+                  <label class="control-label" for="yourMsg">Ihre Nachricht</label>
                   <div class="controls">
-                    <textarea id="inputMessage"rows="4" placeholder="Nachricht"></textarea>
+                    <textarea id="yourMsg"rows="4" name="yourMsg" placeholder="Nachricht"></textarea>
                   </div>
                 </div>
+                <input type="hidden" name="subject" value="Anfrage werk86.de" />
                 <input type="hidden" name="redirect" value="../thankyou.html" />
                 <input type="hidden" name="recipient" value="hallo@vorwaerts-werbung.de" />
                 <input type="submit" class="btn btn-large btn-primary"

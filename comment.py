@@ -44,8 +44,8 @@ else:
     result = "ERROR! " + error
 
 if 'async' in data:
-    print "Content-Type: text/plain\r\n\r\n"
-    print result
+    # print "Content-Type: text/plain\r\n\r\n"
+    return result
 else:
     print "Content-Type: text/html\r\n\r\n"
     print """

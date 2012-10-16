@@ -46,13 +46,12 @@
             form_action = $(this).attr('action');
             $.ajax({
                 type: 'post',
+                dataType: 'text',
                 data: form_contents,
                 url: form_action,
-                error: function () {
-                    $('#contact-form').before('<div class="alert alert-error">Versand fehlgeschlagen</div>');
-                },
                 success: function (result) {
-                    $('#contact-form').before('<div class="alert">' +
+                    alert(result);
+                    $('#contact-form').prepend('<div class="alert">' +
                                              result +
                                              '</div>');
                 }
