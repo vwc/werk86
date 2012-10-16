@@ -36,7 +36,7 @@
         </p>
         <p id="claim">
           Agentur f&uuml;r strategische<br />
-          Kampagnen und (gesellschafts-)<br />
+          Kampagnen und [gesellschafts-]<br />
           politische Kommunikation
         </p>
       </div>
@@ -221,7 +221,8 @@
           </div>
           <div class="span8">
             <aside id="fp-portlets">
-              <form id="contact-form">
+              <form id="contact-form"
+                form method="post" action="cgi-bin/comment.py">
                 <div class="control-group">
                   <label class="control-label" for="inputName">Ihr Name</label>
                   <div class="controls">
@@ -242,6 +243,8 @@
                     </textarea>
                   </div>
                 </div>
+                <input type="hidden" name="redirect" value="../thankyou.html" />
+                <input type="hidden" name="recipient" value="hallo@werk86.de" />
                 <input type="submit" class="btn btn-large btn-primary"
                   value="Abschicken">
               </form>

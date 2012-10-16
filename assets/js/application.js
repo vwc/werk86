@@ -1,5 +1,5 @@
 /*jslint white:false, onevar:true, undef:true, nomen:true, eqeqeq:true, plusplus:true, bitwise:true, regexp:true, newcap:true, immed:true, strict:false, browser:true */
-/*global jQuery:false, document:false, window:false */
+/*global jQuery:false, document:false */
 
 (function ($) {
     $(document).ready(function () {
@@ -40,8 +40,24 @@
                 }
             }});
         });
-        $(window).on('scroll', function () {
-            $('#scroll-top').fadeIn('slow');
+        $('#contact-form').on('submit', function () {
+            $(this).fadeOut('fast');
+            form_contents = $(this).serialize() + "&async=true";
+            form_action = $(this).attr('action');
+            $.ajax({
+                type: 'post',
+                data: form_contents,
+                url: form_action,
+                error: function () {
+                    $('#contact-form').before('<div class="alert alert-error">Versand fehlgeschlagen</div>');
+                },
+                success: function (result) {
+                    $('#contact-form').before('<div class="alert">' +
+                                             result +
+                                             '</div>');
+                }
+            });
+            return false;
         });
     });
 }(jQuery));
