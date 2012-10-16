@@ -13,8 +13,7 @@ body > header {
     display: block;
     overflow: hidden;
     margin: -10px @baseLineHeight @baseLineHeight 0;
-    border: 1px solid @appBlueLight;
-    background:url(../assets/img/logo.jpg) no-repeat 0 0 transparent;
+    background:url(../img/logo.jpg) no-repeat 0 0 transparent;
     text-indent: 9999px;
     .size(163px, 166px);
   }
@@ -67,6 +66,9 @@ body > header {
       display: none;
       margin-top: @baseLineHeight * 2;
       text-align: left;
+      hr:first-child {
+        margin-top: @baseLineHeight;
+      }
       h2, h3 {
         color:@appBlue;
         font-family: 'OswaldBook';
@@ -96,13 +98,18 @@ body > header {
     position:relative;
     .lug {
       position: absolute;
-      bottom: -25px;
+      bottom: -30px;
       left: 110px;
       //border: 1px solid red;
-      .size(25px, 20px);
+      .size(35px, 20px);
       background: @appBlue;
+      border: 1px solid @appBlue;
+      border-width: 1px 1px 0 0;
+      .border-radius(@borderRadiusSmall);
       .lug-icon {
         color: @appBlueLight;
+        padding: 5px 0px;
+        font-size: @baseFontSize + 2;
       }
       .arrow,
       .arrow:after {
@@ -147,7 +154,8 @@ body > header {
 }
 
 #footer {
-  h4 {
+  padding-top: @navbarHeight;
+  h2 {
     font-family: 'OswaldBook';
     color: @appBlue;
   }
@@ -155,11 +163,18 @@ body > header {
     label {
       font-weight: bold;
       color: @appBlue;
+      line-height: @baseLineHeight + 10;
+      font-size: @baseFontSize + 6;
     }
     input[type="text"],
     textarea {
       border: 2px solid @appBlueLight;
       .input-xlarge();
+      line-height: @baseLineHeight + 10;
+      font-size: @baseFontSize + 6;
+    }
+    input[type="text"] {
+      height: @baseLineHeight + 12;
     }
     input[type="submit"] {
       .border-radius(0px);
