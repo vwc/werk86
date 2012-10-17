@@ -5447,8 +5447,11 @@ body > header p a {
 #portfolio {
   background: #7494aa;
   color: #ffffff;
-  text-align: center;
   padding: 20px 0px;
+}
+#portfolio h4 {
+  text-align: left;
+  font-weight: normal;
 }
 #portfolio #logobar {
   text-indent: 99999px;
