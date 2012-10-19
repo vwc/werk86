@@ -5310,6 +5310,11 @@ body > header p a {
 .container > hr {
   margin: 60px 0;
 }
+.marker-blue > li {
+  list-style: none;
+  background: url(../img/bullet.jpg) no-repeat 0 7px transparent;
+  padding-left: 15px;
+}
 /* Main marketing message and sign up button */
 .jumbotron {
   margin: 40px 0;
